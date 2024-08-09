@@ -1,0 +1,14 @@
+{
+    "semi": false,
+    "singleQuote" : true,
+    "arrowParens" : "avoid",
+    "workbench.colorTheme": "Visual Studio Light",
+    "files.autoSave": "afterDelay",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
+    
