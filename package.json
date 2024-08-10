@@ -9,8 +9,6 @@
     "format:fix": "prettier . --write",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "codestyle": "run-p lint format",
-    "codestyle:fix": "run-s lint:fix format:fix",
     "build": "babel src --out-dir build --source-maps inline"
   },
   "author": "",
