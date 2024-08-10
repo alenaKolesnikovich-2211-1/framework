@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "babel-node src/index.js",
-    "format": "prettier . --check",
-    "format:fix": "prettier . --write",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "build": "babel src --out-dir build --source-maps inline"
+    "start": "babel-node src/main.js",
+    "format:ci": "prettier . --check",
+    "format": "prettier . --write",
+    "lint:ci": "eslint .",
+    "lint": "eslint . --fix",
+    "codestyle:ci": "run-p lint:ci format:ci",
+    "codestyle": "run-s lint format",
+    "build": "babel src --out-dir build --source-maps inline",
+    "test": "jest --verbose",
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",

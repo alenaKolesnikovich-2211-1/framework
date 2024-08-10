@@ -4,14 +4,17 @@ module.exports = {
     es2021: true
   },
   extends: ['standard',
-    'prettier'],
+    'prettier', "plugin:jest/recommended"],
   overrides: [
     {
       env: {
-        node: true
+        node: true,
+        jest: true
       },
       files: [
-        '.eslintrc.{js,cjs}'
+        '.eslintrc.{js,cjs}',
+        "**/*.test.js",
+        "**/*.test.jsx"
       ],
       parserOptions: {
         sourceType: 'script'
