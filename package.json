@@ -1,6 +1,7 @@
 {
-  "name": "framework",
+  "name": "qajs-2024-03",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/main.js",
@@ -15,8 +16,8 @@
     "coverage": "jest --coverage"
   },
   "author": "",
+  "keywords": [],
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@babel/cli": "^7.24.1",
     "@babel/core": "^7.24.4",

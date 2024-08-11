@@ -1,33 +1,32 @@
 module.exports = {
   env: {
-    browser: true,
-    es2021: true
+    es2021: true,
+    node: true,
+    'jest/globals': true,
   },
-  extends: ['standard',
-    'prettier'],
+  extends: ['standard', 'prettier'],
   overrides: [
     {
       env: {
-        node: true
+        node: true,
       },
-      files: [
-        '.eslintrc.{js,cjs}'
-      ],
+      files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
-        sourceType: 'script'
-      }
-    }
+        sourceType: 'script',
+      },
+    },
+    {
+      files: ['tests/**/*.test.js'],
+      plugins: ['jest'],
+      extends: ['plugin:jest/recommended'],
+      env: {
+        jest: true,
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  rules: {
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error"
-  },
-  plugins: ["jest"]
+  rules: {},
 }
